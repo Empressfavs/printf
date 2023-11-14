@@ -9,4 +9,7 @@ int _printf(const char *format, ...);
 int binary (int num);
 int octal(int num);
 
+int _putchar(char c);
+int _puts(char *str);
+
 #endif
