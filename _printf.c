@@ -1,13 +1,17 @@
 #include "main.h"
-
+/**
+ * _printf - writes the string format to stdout
+ * @format: The string to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int _printf(const char *format, ...)
 {
 	va_list num_args;
 	int next_element = 0;
-	int len = 0;
 
 	va_start(num_args, format);
-
 	if (format == NULL)
 		return (-1);
 	while (*format)
@@ -33,7 +37,7 @@ int _printf(const char *format, ...)
 			{
 				char *str = va_arg(num_args, char*);
 
-				len = 0;
+				int len = 0;
 				while (str[len] != '\0')
 					len++;
 				write(1, str, len);
