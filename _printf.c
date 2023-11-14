@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == '%')
 			{
-				write(1, format, 1);
+				return (-1);
 				next_element++;
 			}
 		}
